@@ -38,6 +38,7 @@ module Acl9
 
         join_model = options[:join_model] || Acl9::config[:default_join_model_name]
         
+        has_many join_model
         has_many assoc, :class_name => role, :through => join_model
         
 
