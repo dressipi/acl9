@@ -134,7 +134,7 @@ module Acl9
         has_many join_model
         has_many subject.demodulize.tableize.to_sym,
                   :class_name => subject,
-                  :though => join_model
+                  :through => join_model
         
 
         belongs_to :authorizable, :polymorphic => true
